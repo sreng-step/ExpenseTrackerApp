@@ -6,5 +6,13 @@ namespace ExpenseTrackerApp
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            using(var g = panel1.CreateGraphics())
+            {
+                g.FillEllipse(Brushes.White, 0,0,panel1.Width,panel1.Height);
+            }
+        }
     }
 }
